@@ -2,7 +2,7 @@ FROM debian:jessie
 MAINTAINER Tibo Delor "delor.thibault@gmail.com"
 
 RUN apt-get update \
-    && DEBIAN_FRONTEND=noninteractive apt-get install  --no-install-recommends -qqy curl \
+    && DEBIAN_FRONTEND=noninteractive apt-get install  --no-install-recommends -qqy curl ca-certificates \
     && rm -rf /var/lib/apt/lists/* \
     && curl -sSkLO https://static.rust-lang.org/dist/rust-1.10.0-x86_64-unknown-linux-gnu.tar.gz \
     && curl -sSkL https://static.rust-lang.org/dist/rust-1.10.0-x86_64-unknown-linux-gnu.tar.gz.sha256 | sha256sum -c - \
