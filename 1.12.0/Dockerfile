@@ -20,4 +20,4 @@ RUN apt-get update \
     && mkdir rust \
     && tar -C /rust -xzf rust-1.12.0-x86_64-unknown-linux-gnu.tar.gz --strip-components=1 \
     && /rust/install.sh --without=rust-docs \
-    && rm -rf /rust-1.10.0-x86_64-unknown-linux-gnu.tar.gz /rust /usr/local/share/doc/ /usr/local/share/man/
+    && rm -rf /rust-1.12.0-x86_64-unknown-linux-gnu.tar.gz /rust /usr/local/share/doc/ /usr/local/share/man/
